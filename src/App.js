@@ -1,23 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+// Imports
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
+// Components
+import Footer from "./components/Footer/Footer.js";
+import Nav from "./components/Nav/Nav.js";
+
+// pages
+import NASAList from "./pages/NasaList/NASAList.js";
+import Home from "./pages/Home/Home.js";
+import About from "./pages/About/About.js";
+import Giphy from "./pages/Giphy/Giphy.js";
+import Starships from "./pages/StarShips/StarShipsList.js";
+// contexts
+import UserContext from "./contexts/UserContext.js";
+
+// CSS
+// import "./App.css";
+
+//function declaration
 function App() {
+  const [user, setUser] = useState("David");
+  console.log('App', user)
+  const value = {user, setUser}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+
+      <UserContext.Provider value={value}>
+        <Nav />
+
+        {/*  the component that changes in our browser is inside the Routes component */}
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="nasalist" element={<NASAList />} />
+          <Route path="about" element={<About />} />
+          <Route path="giphy" element={<Giphy />} />
+          <Route path="starships" element={<Starships />} />
+        </Routes>
+
+        <Footer />
+      </UserContext.Provider>
+
+      {/* <Outlet /> */}
     </div>
   );
 }
