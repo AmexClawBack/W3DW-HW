@@ -43,8 +43,7 @@ const NASAList = () => {
     console.log("HandleSubmit:");
     // GET REQUEST
     // Any AJAX calls/HTTP REQUEST using axios/fetch will return a Promise => response
-    axios
-      .get(`https://images-api.nasa.gov/search?q=${userInput}`)
+    axios.get(`https://images-api.nasa.gov/search?q=${userInput}`)
       .then((res) => {
         setData(res.data.collection.items);
         // setLoading(false);
@@ -73,7 +72,7 @@ const NASAList = () => {
 
       {/* { <button onClick={toggle} className="likeButton">{like}</button> */}
 
-      <div id='nasa-container'>
+      <div id="nasa-container">
         {data.map((item) => {
           return (
             // <div key={item.data[0].nasa_id}>Hello</div>

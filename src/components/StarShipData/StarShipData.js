@@ -6,7 +6,7 @@ const Starshipdata = (props) => {
       
         <div  >
         {/* <div className="d-flex flex-row"> */}
-        <div className="card text-white bg-dark mb-2 mt-2 " style={{ width: "18rem" }}>
+        <div className="card text-white bg-dark  mt-2 mb-2 d-flex p-2 m-2"  style={{ width: "18rem" }}>
          {/* <img
           src='#'
           className="card-img-top"
