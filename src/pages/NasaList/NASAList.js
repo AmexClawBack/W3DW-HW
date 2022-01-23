@@ -52,11 +52,12 @@ const NASAList = () => {
       .catch((err) => console.error(err));
   };
   return (
-    <div>
-      <h1>NASAgram</h1>
+    <div className="container d-flex  flex-column ">
+      <h1 className='justify-content-center d-flex'>NASAgram</h1>
+      <h3 className='justify-content-center d-flex'>Discover all of the images and data from NASA!</h3>
       {/* {console.log("state", data)} */}
       {/* CONTROLLED FORM - meaning handle our change via state */}
-      <form onSubmit={handleSubmit}>
+      <form className='justify-content-center d-flex mb-2'onSubmit={handleSubmit}>
         <label htmlFor="userInput">
           <span>Search:</span>
         </label>

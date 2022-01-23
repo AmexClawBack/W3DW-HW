@@ -45,22 +45,25 @@ const Giphy = () => {
   // useEffect is a React hook we have to import
   // It takes in two arguments
   // first argument is the function, second is our dependacy array
-  useEffect(() => {
-    console.log("We mounted");
+  // useEffect(() => {
+  //   console.log("We mounted");
 
-    handleSubmit();
-    // An empty dependacy array allows us to call our useEffect once only
-    // Any dependancy you pass inside our dependency array will tell our component to listen for changes in those dpenedencies
-  }, []);
+  //   handleSubmit();
+  //   // An empty dependacy array allows us to call our useEffect once only
+  //   // Any dependancy you pass inside our dependency array will tell our component to listen for changes in those dpenedencies
+  // }, []);
 
   return (
-    <div>
-      <div>
-        <h1>GIPHY</h1>
+    <div className="container">
+    
+        <h1 className="d-flex justify-content-center">GIPHY</h1>
+        <h3 className="d-flex justify-content-center">Click button to display a random GIF</h3>
         {/* {toggle ? <img src={data} alt="" />: <img src={data} alt="" />} */}
-        <button onClick={handleSubmit}>click</button>
+<div className="container d-flex justify-content-center flex-column">
+        <button type='button'  className="btn btn-primary " onClick={handleSubmit}>click</button>
+      
         {data && <img src={data} alt="random" />}
-      </div>
+        </div>
     </div>
   );
 };

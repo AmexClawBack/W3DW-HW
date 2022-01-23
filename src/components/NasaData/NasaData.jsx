@@ -28,10 +28,10 @@ const NasaData = (props) => {
     </div>
     </div> */
 
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card text-white bg-dark mb-3" style={{ width: "18rem" }}>
       <img
         src={props.item.links?.[0].href}
-        className="card-img-top"
+        className="card-img-top mb-2"
         alt="..."
       />
       <div className="card-body overflow-auto" style={{ height: "18rem" }}>
