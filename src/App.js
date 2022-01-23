@@ -12,7 +12,7 @@ import NASAList from "./pages/NasaList/NASAList.js";
 import Home from "./pages/Home/Home.js";
 import About from "./pages/About/About.js";
 import Giphy from "./pages/Giphy/Giphy.js";
-import Starships from "./pages/StarShips/StarShipsList.js";
+import Starships from "./pages/StarShips/services/sw-api.js";
 // contexts
 import UserContext from "./contexts/UserContext.js";
 
