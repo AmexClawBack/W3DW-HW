@@ -12,7 +12,7 @@ const Starshipdata = (props) => {
           className="card-img-top"
           alt="..."
         />  */}
-        <div className="card-body overflow-auto" style={{ height: "18rem" }} >
+        <div className="card-body overflow-auto d-flex flex-column justify-content-between " style={{ height: "18rem" }} >
           <h5 className="card-title">Name: {props.ship.name}</h5>
           <p>Model: {props.ship.model}</p>
           <p>Manufacturer: {props.ship.manufacturer}</p>
